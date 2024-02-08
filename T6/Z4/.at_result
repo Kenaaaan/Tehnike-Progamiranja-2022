@@ -1,0 +1,333 @@
+{
+    "buildhost_description": {
+        "id": "gcloud",
+        "os": "Linux 5.10.0-18-cloud-amd64 x86_64\nDebian GNU/Linux 11 (bullseye)\n"
+    },
+    "tools": {
+        "compile": "10.2.1 20210110",
+        "compile[debug]": "10.2.1 20210110",
+        "debug": "10.1.90.20210103-git",
+        "profile[asan]": "10.2.1 20210110"
+    },
+    "status": 4,
+    "test_results": {
+        "3408": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Koliko zelite redova: Izuzetak: Broj redova mora biti pozitivan",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3409": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Koliko zelite redova: Izuzetak: Broj redova mora biti pozitivan",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3410": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Koliko zelite redova: 1",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3411": {
+            "success": false,
+            "status": 5,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 8,
+                    "duration": 0,
+                    "output": "====START_TEST_9573====Koliko zelite redova: 1\n2 1 2\n3 2 1 2 3\n4 3 2 1 2 3 4\n5 4 3 2 1 2 3 4 5\n6 5 4 3 2 1 2 3 4 5 6\n7 6 5 4 3 2 1 2 3 4 5 6 7\n8 7 6 5 4 3 2 1 2 3 4 5 6 7 8\n9 8 7 6 5 4 3 2 1 2 3 4 5 6 7 8 9\n10 9 8 7 6 5 4 3 2 1 2 3 4 5 6 7 8 9 10",
+                    "exit_code": 1,
+                    "success": false
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "=================================================================\n==2818522==ERROR: AddressSanitizer: attempting free on address which was not malloc()-ed: 0x614000000044 in thread T0\n    #0 0x7f513c3ce127 in operator delete[](void*) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:163\n    #1 0x560db96bf90d in _main() main.cpp:41\n    #2 0x560db96bfb29 in main main.cpp:56\n    #3 0x7f513bf8ad09 in __libc_start_main ../csu/libc-start.c:308\n    #4 0x560db96bf279 in _start (outputBHAm5g+0x2279)\n\n0x614000000044 is located 4 bytes inside of 400-byte region [0x614000000040,0x6140000001d0)\nfreed by thread T0 here:\n    #0 0x7f513c3ce127 in operator delete[](void*) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:163\n    #1 0x560db96bf90d in _main() main.cpp:41\n    #2 0x560db96bfb29 in main main.cpp:56\n    #3 0x7f513bf8ad09 in __libc_start_main ../csu/libc-start.c:308\n\npreviously allocated by thread T0 here:\n    #0 0x7f513c3cd7a7 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:102\n    #1 0x560db96bf3dd in KreirajTrougao(int) main.cpp:10\n    #2 0x560db96bf6fd in _main() main.cpp:34\n    #3 0x560db96bfb29 in main main.cpp:56\n    #4 0x7f513bf8ad09 in __libc_start_main ../csu/libc-start.c:308\n\nSUMMARY: AddressSanitizer: bad-free ../../../../src/libsanitizer/asan/asan_new_delete.cpp:163 in operator delete[](void*)\n=================================================================\n==2818522==ERROR: AddressSanitizer: attempting free on address which was not malloc()-ed: 0x614000000050 in thread T0\n    #0 0x7f513c3ce127 in operator delete[](void*) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:163\n    #1 0x560db96bf90d in _main() main.cpp:41\n    #2 0x560db96bfb29 in main main.cpp:56\n    #3 0x7f513bf8ad09 in __libc_start_main ../csu/libc-start.c:308\n    #4 0x560db96bf279 in _start (outputBHAm5g+0x2279)\n\n0x614000000050 is located 16 bytes inside of 400-byte region [0x614000000040,0x6140000001d0)\nfreed by thread T0 here:\n    #0 0x7f513c3ce127 in operator delete[](void*) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:163\n    #1 0x560db96bf90d in _main() main.cpp:41\n    #2 0x560db96bfb29 in main main.cpp:56\n    #3 0x7f513bf8ad09 in __libc_start_main ../csu/libc-start.c:308\n\npreviously allocated by thread T0 here:\n    #0 0x7f513c3cd7a7 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:102\n    #1 0x560db96bf3dd in KreirajTrougao(int) main.cpp:10\n    #2 0x560db96bf6fd in _main() main.cpp:34\n    #3 0x560db96bfb29 in main main.cpp:56\n    #4 0x7f513bf8ad09 in __libc_start_main ../csu/libc-start.c:308\n\nSUMMARY: AddressSanitizer: bad-free ../../../../src/libsanitizer/asan/asan_new_delete.cpp:163 in operator delete[](void*)\n=================================================================\n==2818522==ERROR: AddressSanitizer: alloc-dealloc-mismatch (INVALID vs operator delete []) on 0x614000000064\n    #0 0x7f513c3ce127 in operator delete[](void*) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:163\n    #1 0x560db96bf90d in _main() main.cpp:41\n    #2 0x560db96bfb29 in main main.cpp:56\n    #3 0x7f513bf8ad09 in __libc_start_main ../csu/libc-start.c:308\n    #4 0x560db96bf279 in _start (outputBHAm5g+0x2279)\n\n0x614000000064 is located 36 bytes inside of 400-byte region [0x614000000040,0x6140000001d0)\nfreed by thread T0 here:\n    #0 0x7f513c3ce127 in operator delete[](void*) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:163\n    #1 0x560db96bf90d in _main() main.cpp:41\n    #2 0x560db96bfb29 in main main.cpp:56\n    #3 0x7f513bf8ad09 in __libc_start_main ../csu/libc-start.c:308\n\npreviously allocated by thread T0 here:\n    #0 0x7f513c3cd7a7 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:102\n    #1 0x560db96bf3dd in KreirajTrougao(int) main.cpp:10\n    #2 0x560db96bf6fd in _main() main.cpp:34\n    #3 0x560db96bfb29 in main main.cpp:56\n    #4 0x7f513bf8ad09 in __libc_start_main ../csu/libc-start.c:308\n\nSUMMARY: AddressSanitizer: alloc-dealloc-mismatch ../../../../src/libsanitizer/asan/asan_new_delete.cpp:163 in operator delete[](void*)\n==2818522==HINT: if you don't care about these errors you may set ASAN_OPTIONS=alloc_dealloc_mismatch=0\n==2818522==AddressSanitizer CHECK failed: ../../../../src/libsanitizer/asan/asan_allocator.cpp:587 \"((m->free_tid)) == ((kInvalidTid))\" (0x1, 0xffffff)\n    #0 0x7f513c3d4657 in AsanCheckFailed ../../../../src/libsanitizer/asan/asan_rtl.cpp:73\n    #1 0x7f513c3f1d4a in __sanitizer::CheckFailed(char const*, int, char const*, unsigned long long, unsigned long long) ../../../../src/libsanitizer/sanitizer_common/sanitizer_termination.cpp:78\n    #2 0x7f513c34a3dd in __asan::Allocator::QuarantineChunk(__asan::AsanChunk*, void*, __sanitizer::BufferedStackTrace*) ../../../../src/libsanitizer/asan/asan_allocator.cpp:587\n    #3 0x7f513c3ce0ff in operator delete[](void*) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:163\n    #4 0x560db96bf90d in _main() main.cpp:41\n    #5 0x560db96bfb29 in main main.cpp:56\n    #6 0x7f513bf8ad09 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x560db96bf279 in _start (outputBHAm5g+0x2279)\n\n",
+                    "status": 6,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "output": "",
+                            "file": "main.cpp",
+                            "line": 41,
+                            "file_freed": "main.cpp",
+                            "line_freed": "41",
+                            "file_allocated": "main.cpp",
+                            "line_allocated": "10"
+                        },
+                        {
+                            "output": "ERROR: AddressSanitizer: alloc-dealloc-mismatch (INVALID vs operator delete []) on 0x614000000064\n    #1 0x560db96bf90d in _main() main.cpp:41\n    #2 0x560db96bfb29 in main main.cpp:56\n    #4 0x560db96bf279 in _start (outputBHAm5g+0x2279)\n0x614000000064 is located 36 bytes inside of 400-byte region [0x614000000040,0x6140000001d0)\nfreed by thread T0 here:\n    #1 0x560db96bf90d in _main() main.cpp:41\n    #2 0x560db96bfb29 in main main.cpp:56\npreviously allocated by thread T0 here:\n    #1 0x560db96bf3dd in KreirajTrougao(int) main.cpp:10\n    #2 0x560db96bf6fd in _main() main.cpp:34\n    #3 0x560db96bfb29 in main main.cpp:56\nSUMMARY: AddressSanitizer: alloc-dealloc-mismatch ../../../../src/libsanitizer/asan/asan_new_delete.cpp:163 in operator delete[](void*)\nHINT: if you don't care about these errors you may set ASAN_OPTIONS=alloc_dealloc_mismatch=0\nAddressSanitizer CHECK failed: ../../../../src/libsanitizer/asan/asan_allocator.cpp:587 \"((m->free_tid)) == ((kInvalidTid))\" (0x1, 0xffffff)\n    #4 0x560db96bf90d in _main() main.cpp:41\n    #5 0x560db96bfb29 in main main.cpp:56\n    #7 0x560db96bf279 in _start (outputBHAm5g+0x2279)\n",
+                            "type": 6,
+                            "file": "main.cpp",
+                            "line": 41,
+                            "file_freed": "main.cpp",
+                            "line_freed": "41",
+                            "file_allocated": "main.cpp",
+                            "line_allocated": "10"
+                        }
+                    ]
+                }
+            }
+        },
+        "3412": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Koliko zelite redova: Izuzetak: Nedovoljno memorije!",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3413": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Izuzetak: Broj redova mora biti pozitivan",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3414": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "1 2 1 2 3 2 1 2 3 4 3 2 1 2 3 4 5 4 3 2 1 2 3 4 5 6 5 4 3 2 1 2 3 4 5 6 7 6 5 4 3 2 1 2 3 4 5 6 7 8 7 6 5 4 3 2 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2 1 2 3 4 5 6 7 8 9 10 9 8 7 6 5 4 3 2 1 2 3 4 5 6 7 8 9 10",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3443": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "1\n2 1 2\n3 2 1 2 3\n4 3 2 1 2 3 4\n5 4 3 2 1 2 3 4 5\nNew pozvan 2 puta,  delete [] pozvan 2 puta, a alocirano ukupno 140 bajta i to redom: 40 100",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3444": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "New pozvan 1 puta,  delete [] pozvan 1 puta, a alocirano ukupno 40 bajta i to redom: 40 Izuzetak: Nedovoljno memorije!",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        }
+    },
+    "time": 1688390598
+}

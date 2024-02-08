@@ -1,0 +1,190 @@
+{
+    "id": 8557,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 5, Zadatak 7",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14",
+                "asan"
+            ]
+        },
+        "execute": {
+            "require": "asan"
+        },
+        "debug": [],
+        "profile[asan]": {
+            "require": "asan",
+            "fast": true,
+            "input_file": "stderr.txt"
+        }
+    },
+    "tests": [
+        {
+            "id": 3371,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": []
+        },
+        {
+            "id": 3365,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT1: testiramo funkciju SumaBloka za dek cijelih brojeva\n\nstd::deque<double> d{1,2,3,4,5,6,7,8,9};\nstd::cout<<\"Suma bloka je: \"<<SumaBloka(d.begin(), d.end());",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "#include <deque>",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Suma bloka je: 45"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        },
+        {
+            "id": 3366,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT2: testiramo funkciju SumaBloka za vektor cijelih brojeva\n\nstd::vector<double> v{-95,25,333,96,6,12,1,2,35,0};\nstd::cout<<\"Suma bloka je: \"<<SumaBloka(v.begin(), v.end());",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "#include <vector>\n#include <deque>",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Suma bloka je: 415"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        },
+        {
+            "id": 3367,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT3: testiramo funkciju SumaBloka za niz realnih brojeva\n\ndouble niz[] {1.5,5.5,3.6,1.4,2};\nstd::cout<<\"Suma bloka je: \"<<SumaBloka(std::begin(niz), std::end(niz));",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "#include <deque>",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Suma bloka je: 14"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        },
+        {
+            "id": 3368,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT4: testiramo funkciju SumaBloka za kontejner stringova (dek)\n\nstd::deque<std::string> d {\"Predmet:\",\" \",\"Tehnike\", \" \", \"programiranja\", \" \", \"2016\/2017\"};\nstd::string suma = SumaBloka (d.begin(), d.end());\nstd::cout << \"'\" << suma << \"'\";",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "#include <string>\n#include <deque>",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "'Predmet: Tehnike programiranja 2016\/2017'"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        },
+        {
+            "id": 3369,
+            "name": "Test 6",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT5: Slucaj kada je blok prazan \n\/\/ulazni parametar je dek \n\ntry \n{\nstd::deque<double> d(0);\nauto suma= SumaBloka(d.begin(),d.end());\nstd::cout<<\"NE SMIJE SE ISPISATI!\";\n}\ncatch(std::range_error izuzetak) {\nstd::cout << izuzetak.what() << std::endl;\n}\ncatch(...){\nstd::cout<<\"POGRESAN TIP IZUZETKA!\";}",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "#include <deque>",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Blok je prazan"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        },
+        {
+            "id": 3370,
+            "name": "Test 7",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT6: Testiramo funkciju SumaBloka za vektor stringova\n\nstd::vector<std::string> s{\"Predmet:\",\" \",\"Tehnike\", \" \", \"programiranja\", \" \", \"2016\/2017\"};\nstd::string suma = SumaBloka (s.begin(), s.end());\nstd::cout << \"'\" << suma << \"'\";\n",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "#include <string>\n#include <vector>\n#include <deque>",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "'Predmet: Tehnike programiranja 2016\/2017'"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        }
+    ]
+}

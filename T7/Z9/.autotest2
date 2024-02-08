@@ -1,0 +1,114 @@
+{
+    "id": 8579,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 7, Zadatak 9",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14",
+                "asan"
+            ]
+        },
+        "execute": {
+            "require": "asan"
+        },
+        "debug": [],
+        "profile[asan]": {
+            "require": "asan",
+            "fast": true,
+            "input_file": "stderr.txt"
+        }
+    },
+    "tests": [
+        {
+            "compile": [],
+            "options": [
+                "silent",
+                "terminate"
+            ]
+        },
+        {
+            "id": 3489,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 1: test int\nTest();",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "void Test()\n{\n\tstd::cout << plus2(3)(5) << std::endl;\n  \tstd::cout << plus3(3)(5)(6) << std::endl;\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "8\n14\n"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        },
+        {
+            "id": 3490,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT 2: test neutralni element 0\nTest1();",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "void Test1()\n{\n\tstd::cout << plus2(0)(5.55) << std::endl;\n  \tstd::cout << plus3(103.15)(0.)(1e-7) << std::endl;\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "5.55\n103.15\n"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        },
+        {
+            "id": 3491,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT 3: test mali brojevi\nTest2();",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "void Test2()\n{\n\tstd::cout << plus2(0.0)(1e-5) << std::endl;\n  \tstd::cout << plus3(15e-5)(0.)(1e-7) << std::endl;\n}\n",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "1e-05\n0.0001501\n"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        }
+    ],
+    "version": "2"
+}

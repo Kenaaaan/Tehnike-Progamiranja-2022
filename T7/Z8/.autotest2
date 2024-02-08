@@ -1,0 +1,91 @@
+{
+    "id": 8578,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 7, Zadatak 8",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14",
+                "asan"
+            ]
+        },
+        "execute": {
+            "require": "asan"
+        },
+        "debug": [],
+        "profile[asan]": {
+            "require": "asan",
+            "fast": true,
+            "input_file": "stderr.txt"
+        }
+    },
+    "tests": [
+        {
+            "compile": [],
+            "options": [
+                "silent",
+                "terminate"
+            ]
+        },
+        {
+            "id": 3486,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT1: test funkcije\nTest();",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "void Test()\n{\n\tstd::cout << IzvrniBezRazmaka(\"Evo pada kisa\") << std::endl;\n  \tstd::cout << IzvrniBezRazmaka(\"I jogurt ujutru goji ....\") << std::endl;\n  \tstd::cout << IzvrniBezRazmaka(\"  udovica  baci   vodu\") << std::endl;\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "asikadapovE\n....ijogurtujutrugojI\nudovicabacivodu\n"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        },
+        {
+            "id": 3488,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT 2: test razmaci\nTest1();",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "void Test1()\n{\n\tstd::cout << IzvrniBezRazmaka(\"      \") << std::endl;\n  \tstd::cout << IzvrniBezRazmaka(\"\") << std::endl;\n  \tstd::cout << IzvrniBezRazmaka(\"       \") << std::endl;\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "\n\n\n"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        }
+    ],
+    "version": "2"
+}

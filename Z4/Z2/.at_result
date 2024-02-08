@@ -1,0 +1,181 @@
+{
+    "buildhost_description": {
+        "id": "etf.c9sec2",
+        "os": "Linux 5.4.0-137-generic x86_64\nUbuntu 20.04.5 LTS\n"
+    },
+    "tools": {
+        "compile": "9.4.0",
+        "compile[debug]": "9.4.0",
+        "debug": "9.2",
+        "profile[asan]": "9.4.0"
+    },
+    "status": 4,
+    "test_results": {
+        "2": {
+            "success": false,
+            "status": 6,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 6,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": false
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3": {
+            "success": false,
+            "status": 6,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 6,
+                    "duration": 0,
+                    "output": "Unesite broj NepreklapajuciKrugova: Unesite centar 1. NepreklapajuciKruga: Unesite poluprecnik 1. NepreklapajuciKruga: Neispravan poluprecnik! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Unesite poluprecnik 1. NepreklapajuciKruga: Unesite centar 2. NepreklapajuciKruga: Unesite poluprecnik 2. NepreklapajuciKruga: Unesite parametre translacije (delta_x,delta_y): Unesite ugao rotacije oko tacke (0,0) u stepenima: Parametri NepreklapajuciKrugova nakon obavljene transformacije su:\n{(-2.82257,nan),1}\n{(-1.28036,nan),1}\nNepreklapajuciKrug sa najvecim obimom je: {(-2.82257,nan),1}\nNe postoje NepreklapajuciKrugovi koji se presjecaju!",
+                    "exit_code": 0,
+                    "success": false
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "4": {
+            "success": false,
+            "status": 8,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 8,
+                    "duration": 0,
+                    "output": "====START_TEST_7816====Unesite broj NepreklapajuciKrugova: Unesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite centar 1. NepreklapajuciKruga: Neispravne koordinate centra! Pokusajte ponovo:\nUnesite",
+                    "exit_code": 141,
+                    "success": false
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "5": {
+            "success": false,
+            "status": 6,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 6,
+                    "duration": 0,
+                    "output": "Unesite broj NepreklapajuciKrugova: Uneseni broj nije prirodan!",
+                    "exit_code": 0,
+                    "success": false
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "6": {
+            "success": false,
+            "status": 6,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 6,
+                    "duration": 0,
+                    "output": "Unesite broj NepreklapajuciKrugova: Unesite centar 1. NepreklapajuciKruga: Unesite poluprecnik 1. NepreklapajuciKruga: Unesite centar 2. NepreklapajuciKruga: Unesite poluprecnik 2. NepreklapajuciKruga: Unesite centar 3. NepreklapajuciKruga: Unesite poluprecnik 3. NepreklapajuciKruga: Unesite parametre translacije (delta_x,delta_y): Unesite ugao rotacije oko tacke (0,0) u stepenima: Parametri NepreklapajuciKrugova nakon obavljene transformacije su:\n{(-4.51753,15.4574),2}\n{(-5.47406,5.05225),5}\n{(-6.91787,6.57293),7}\nNepreklapajuciKrug sa najvecim obimom je: {(-6.91787,6.57293),7}\nNepreklapajuciKrug 2 i NepreklapajuciKrug 3",
+                    "exit_code": 0,
+                    "success": false
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        }
+    },
+    "time": 1685574617
+}

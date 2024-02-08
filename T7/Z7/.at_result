@@ -1,0 +1,115 @@
+{
+    "buildhost_description": {
+        "id": "etf.c9prim2",
+        "os": "Linux 5.15.0-58-generic x86_64\nUbuntu 20.04.5 LTS\n"
+    },
+    "tools": {
+        "compile": "9.4.0",
+        "compile[debug]": "9.4.0",
+        "debug": "9.2",
+        "profile[asan]": "9.4.0"
+    },
+    "status": 4,
+    "test_results": {
+        "3483": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "A B C D\nB",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3484": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "-200 30 40 50 60 100 500\n30 50 100",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3485": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "{1,abc}{2,abc}{3,bcd}{4,abc}{5,bcd}\n{2,abc}",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        }
+    },
+    "time": 1683065437
+}

@@ -1,0 +1,164 @@
+{
+    "buildhost_description": {
+        "id": "etf.c9prim2",
+        "os": "Linux 5.15.0-58-generic x86_64\nUbuntu 20.04.5 LTS\n"
+    },
+    "tools": {
+        "compile": "9.4.0",
+        "compile[debug]": "9.4.0",
+        "debug": "9.2",
+        "profile[asan]": "9.4.0"
+    },
+    "status": 4,
+    "test_results": {
+        "2": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:26:13: error: ‘Matrica’ was not declared in this scope\n   26 |             Matrica<int> m1(\"datoteka.DAT\", true);\n      |             ^~~~~~~\nmain.cpp:26:21: error: expected primary-expression before ‘int’\n   26 |             Matrica<int> m1(\"datoteka.DAT\", true);\n      |                     ^~~\nmain.cpp:35:13: error: ‘Matrica’ was not declared in this scope\n   35 |             Matrica<int> m1(\"datoteka.txt\", false);\n      |             ^~~~~~~\nmain.cpp:35:21: error: expected primary-expression before ‘int’\n   35 |             Matrica<int> m1(\"datoteka.txt\", false);\n      |                     ^~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 2,
+                            "col": "13",
+                            "message": "'Matrica' was not declared in this scope",
+                            "code": "Matrica<int> m1(\"datoteka.DAT\", true);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 2,
+                            "col": "21",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "Matrica<int> m1(\"datoteka.DAT\", true);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 11,
+                            "col": "13",
+                            "message": "'Matrica' was not declared in this scope",
+                            "code": "Matrica<int> m1(\"datoteka.txt\", false);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 11,
+                            "col": "21",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "Matrica<int> m1(\"datoteka.txt\", false);"
+                        }
+                    ]
+                }
+            }
+        },
+        "3": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘void kreirajDatotetkuZbii1()’:\nmain.cpp:15:26: error: variable ‘std::ofstream dat’ has initializer but incomplete type\n   15 |     std::ofstream dat(ime);\n      |                          ^\nmain.cpp: In function ‘void kreirajDatotetkuZbii2()’:\nmain.cpp:23:26: error: variable ‘std::ofstream dat’ has initializer but incomplete type\n   23 |     std::ofstream dat(ime);\n      |                          ^\nmain.cpp: In function ‘int main()’:\nmain.cpp:43:13: error: ‘Matrica’ was not declared in this scope\n   43 |             Matrica<int> m1(\"matrica.txt\", false);\n      |             ^~~~~~~\nmain.cpp:43:21: error: expected primary-expression before ‘int’\n   43 |             Matrica<int> m1(\"matrica.txt\", false);\n      |                     ^~~\nmain.cpp:44:31: error: ‘setw’ is not a member of ‘std’\n   44 |             std::cout << std::setw(6) << m1;\n      |                               ^~~~\nmain.cpp:44:42: error: ‘m1’ was not declared in this scope; did you mean ‘y1’?\n   44 |             std::cout << std::setw(6) << m1;\n      |                                          ^~\n      |                                          y1\nmain.cpp:54:13: error: ‘Matrica’ was not declared in this scope\n   54 |             Matrica<double> m1(\"matrica.txt\", false);\n      |             ^~~~~~~\nmain.cpp:54:21: error: expected primary-expression before ‘double’\n   54 |             Matrica<double> m1(\"matrica.txt\", false);\n      |                     ^~~~~~\nmain.cpp:55:31: error: ‘setw’ is not a member of ‘std’\n   55 |             std::cout << std::setw(6) << m1;\n      |                               ^~~~\nmain.cpp:55:42: error: ‘m1’ was not declared in this scope; did you mean ‘y1’?\n   55 |             std::cout << std::setw(6) << m1;\n      |                                          ^~\n      |                                          y1",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "main.cpp",
+                            "line": 9,
+                            "col": "26",
+                            "message": "variable 'std::ofstream dat' has initializer but incomplete type",
+                            "code": "std::ofstream dat(ime);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "26",
+                            "message": "variable 'std::ofstream dat' has initializer but incomplete type",
+                            "code": "std::ofstream dat(ime);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "main.cpp",
+                            "line": 21,
+                            "col": "13",
+                            "message": "'Matrica' was not declared in this scope",
+                            "code": "Matrica<int> m1(\"matrica.txt\", false);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "main.cpp",
+                            "line": 21,
+                            "col": "21",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "Matrica<int> m1(\"matrica.txt\", false);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "main.cpp",
+                            "line": 22,
+                            "col": "31",
+                            "message": "'setw' is not a member of 'std'",
+                            "code": "std::cout << std::setw(6) << m1;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "main.cpp",
+                            "line": 22,
+                            "col": "42",
+                            "message": "'m1' was not declared in this scope; did you mean 'y1'?",
+                            "code": "std::cout << std::setw(6) << m1;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "main.cpp",
+                            "line": 32,
+                            "col": "13",
+                            "message": "'Matrica' was not declared in this scope",
+                            "code": "Matrica<double> m1(\"matrica.txt\", false);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "main.cpp",
+                            "line": 32,
+                            "col": "21",
+                            "message": "expected primary-expression before 'double'",
+                            "code": "Matrica<double> m1(\"matrica.txt\", false);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "main.cpp",
+                            "line": 33,
+                            "col": "31",
+                            "message": "'setw' is not a member of 'std'",
+                            "code": "std::cout << std::setw(6) << m1;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "main.cpp",
+                            "line": 33,
+                            "col": "42",
+                            "message": "'m1' was not declared in this scope; did you mean 'y1'?",
+                            "code": "std::cout << std::setw(6) << m1;"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "time": 1686770494
+}

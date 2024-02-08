@@ -1,0 +1,114 @@
+{
+    "id": 85710,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 7, Zadatak 10",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14",
+                "asan"
+            ]
+        },
+        "execute": {
+            "require": "asan"
+        },
+        "debug": [],
+        "profile[asan]": {
+            "require": "asan",
+            "fast": true,
+            "input_file": "stderr.txt"
+        }
+    },
+    "tests": [
+        {
+            "compile": [],
+            "options": [
+                "silent",
+                "terminate"
+            ]
+        },
+        {
+            "id": 3492,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT 1: test lambda 3^4\nTest();",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "void Test()\n{\t\n  std::cout << IteriranaFunkcija([](int x) { return x * x; }, 2)(3) << std::endl;\n}\n",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "81\n"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        },
+        {
+            "id": 3493,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT 2: test tip 7 + 5*3 \nTest1();",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "void Test1()\n{\n\tstd::function<double(double)> g{IteriranaFunkcija([](int x) { return x + 3; }, 5)};\n\tstd::cout << g(7) << std::endl;\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "22\n"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        },
+        {
+            "id": 3494,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT 3: test imenovana funkcija\nTest2();",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "int fun(int x)\n{\n\treturn x * x - x;\n}\n\nvoid Test2()\n{\t\n  std::cout << IteriranaFunkcija(fun, 1)(5) << std::endl;\n}\n",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "20\n"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        }
+    ],
+    "version": "2"
+}
